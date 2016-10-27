@@ -1,0 +1,33 @@
+{
+    "name": "zikula/securitycenter-module",
+    "version": "1.5.0",
+    "description": "Security Administration Module",
+    "type": "zikula-module",
+    "license": "LGPL-3.0+",
+    "authors": [
+        {
+            "name": "Zikula",
+            "homepage": "http://zikula.org/"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Zikula\\SecurityCenterModule\\": "" }
+    },
+    "require": {
+        "php": ">5.4.0"
+    },
+    "extra": {
+        "zikula": {
+            "class": "Zikula\\SecurityCenterModule\\ZikulaSecurityCenterModule",
+            "core-compatibility": ">=1.4.1",
+            "displayname": "Security Center",
+            "url": "securitycenter",
+            "capabilities": {
+                "admin": {"route": "zikulasecuritycentermodule_config_config"}
+            },
+            "securityschema": {
+                "ZikulaSecurityCenterModule::": "::"
+            }
+        }
+    }
+}
